@@ -60,6 +60,13 @@ pipeline {
                 sh "terraform destroy -auto-approve"
             }
         }
-  
+
+
+        stage('Delete project directory') {
+            steps {
+                sh "sudo rm -rf /var/lib/jenkins/workspace/vpc-test"
+            }
+        }
+
     }
 }
