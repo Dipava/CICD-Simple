@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        terraform 'jenkins-terraform'
-    }
-
     stages {
                 stage('checkoutfrom GIT') {
                     steps {
