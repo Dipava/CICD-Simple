@@ -24,6 +24,7 @@ resource "null_resource" "name" {
     ]
   }
 
+/*
 ## Local Exec Provisioner:  local-exec provisioner (Creation-Time Provisioner - Triggered during Create Resource)
 
   provisioner "local-exec" {
@@ -31,7 +32,7 @@ resource "null_resource" "name" {
     working_dir = "local-exec-output-files/"
     #on_failure = continue
   }
-
+*/
 
 }
 
