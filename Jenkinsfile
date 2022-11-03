@@ -28,11 +28,6 @@ pipeline {
                 }
         
 
-                stage('terraform validate') {
-                    steps {
-                        sh 'terraform validate'
-                    }
-                }
 
                 stage('terraform plan') {
                     steps {
@@ -40,14 +35,8 @@ pipeline {
                     }
                 }
 
-                stage('terraform apply') {
-                    steps {
-                        sh 'terraform apply auto approve'
-                    }
-                }
-            
 
-                stage('Approval') {
+                stage('Apply-Approval') {
                     steps {
                         message "Do you want to apply?"
                         ok "Yes"
@@ -60,9 +49,9 @@ pipeline {
                     }
                 }
 
-                stage('Approval') {
+                stage('Destroy-Approval') {
                     steps {
-                        message "Do you want to apply?"
+                        message "Do you want to destroy?"
                         ok "Yes"
                     }
                 }
