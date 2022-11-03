@@ -4,7 +4,9 @@ pipeline {
     stages {
                 stage('checkoutfrom GIT') {
                     steps {
-                            git branch: 'main', credentialsId: 3f0f84df-e841-4453-8126-cb1dacb68155, url: 'https://github.com/Dipava/CICD-Simple'
+                            git branch: 'main',
+                             credentialsId: 3f0f84df-e841-4453-8126-cb1dacb68155,
+                             url: 'https://github.com/Dipava/CICD-Simple'
                     }
                 }
 
