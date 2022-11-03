@@ -39,8 +39,7 @@ pipeline {
 
                 stage('Apply-Approval') {
                     steps {
-                        message "Do you want to apply?"
-                        ok "Yes"
+                        input 'Do you want to Apply'
                     }
                 }
 
@@ -52,8 +51,7 @@ pipeline {
 
                 stage('Destroy-Approval') {
                     steps {
-                        message "Do you want to destroy?"
-                        ok "Yes"
+                        input 'Do you want to Destroy'
                     }
                 }
         
