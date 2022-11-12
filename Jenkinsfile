@@ -64,7 +64,8 @@ pipeline {
 
         stage('Delete project directory') {
             steps {
-                sh "sudo rm -rf /var/lib/jenkins/workspace/vpc-test"
+                sh"cd /var/lib/jenkins/workspace/"
+                sh "sudo rm -rf vpc-test"
             }
         }
 
