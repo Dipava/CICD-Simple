@@ -1,5 +1,5 @@
 # CICD-Simple
-
+test update
 user-data for jenkins server:
 
 #! /bin/bash
